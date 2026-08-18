@@ -27,6 +27,7 @@ const DEFAULTS: any = {
   MANTLE_ARCHIVAL_RPC: 'https://explorer.mantle.xyz/api/eth-rpc',
   GATELAYER_RPC: 'https://www.gatescan.org/gatelayer/api/eth-rpc',
   ROBINHOOD_RPC: 'https://rpc.mainnet.chain.robinhood.com',
+  RONIN_RPC: 'https://ronin.gateway.tenderly.co,https://gateway.tenderly.co/public/ronin',
   SHIDO_RPC: 'https://shidoscan.net/api/eth-rpc',
   SAGA_RPC: "https://sagaevm.jsonrpc.sagarpc.io",
   SAGA_WHITELISTED_RPC: 'https://sagaevm-archive.jsonrpc.sagarpc.io',
@@ -72,6 +73,7 @@ export const ENV_KEYS = new Set([
   'CG_KEY',
   'METAPLEX_API_KEY',
   'DEFIAPP_API_KEY',
+  'GATESWAP_DEFILLAMA_API_KEY',
   'SMARDEX_SUBGRAPH_API_KEY',
   'VIRTUS_BACKEND_BASE',
   'DUNE_BULK_MODE',
@@ -93,7 +95,9 @@ export const ENV_KEYS = new Set([
   'PEARL_BLOCKBOOK_API',
   'OKLINK_API_KEY',
   'TRONSCAN_API_KEY',
-  'ROBINHOOD_RPC'
+  'ROBINHOOD_RPC',
+  'INTERNAL_API_KEY',
+  'MARKETS_API'
 ])
 
 // This is done to support both ZEROx_API_KEY and ZEROX_API_KEY

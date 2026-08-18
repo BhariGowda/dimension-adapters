@@ -74,6 +74,24 @@ const blacklistedVaults: Record<string, Array<{ vault: string, from: string }>> 
     // bad debt; excluding from the freeze onset also keeps the eventual write-off out of the series.
     vault: '0x9B5E92fd227876b4C07a8c02367E2CB23c639DfA',
     from: '2026-03-21',
+  }, {
+    // Clearstar Yield USDC v2 (0xFa17...F853) - the v2 vault of the same name, allocated to the same
+    // frozen market. Share price ran 1.009084 -> 1.019572 over 2026-03-21..04-04 and 1.794800 ->
+    // 1.908595 over the last week alone, ~165% APR against ~5.2% before the freeze, on a USDC vault
+    // that has now marked itself up 91%. Same phantom accrual as the v1 above, same onset date.
+    vault: '0xFa17f7AAdbfAc2C5d3C8125555404c1AE17Df853',
+    from: '2026-03-21',
+  }, {
+    // MEV Capital Elixir USDC - share price 95.38 -> 97.33 in one day (~71,000% APR) on ~$460k
+    // TVL, reporting ~$894k fees/day. Frozen/unrealized bad debt after the Nov 2025 Elixir deUSD
+    // unwind; phantom accrual compounds from early April 2026.
+    vault: '0x1265a81d42d513Df40d0031f8f2e1346954d665a',
+    from: '2026-04-01',
+  }, {
+    // MEV Capital USD0 - share price 7.73 -> 7.82 in one day (~3,300% APR) on ~$217k TVL,
+    // reporting ~$20k fees/day. Same vault-level share-price corruption.
+    vault: '0x749794E985Af5a9A384B9cEe6D88DaB4CE1576A1',
+    from: '2026-04-01',
   }],
 }
 
